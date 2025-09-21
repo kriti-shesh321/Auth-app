@@ -105,19 +105,15 @@ export const forgotPassword = async (req, res) => {
         }
 
         const resetLink = `${process.env.APP_BASE_URL.replace(/\/$/, '')}/reset-password?token=${encodeURIComponent(token)}`;
-
+        
         const subject = 'Reset your password';
         const html = `
-            <html>
-            <body>
             <p>Hi ${user.username || ''},</p>
             <p>Click the link below to reset your password. This link expires in 1 hour.</p>
-            <p><a href="${resetLink}" target="_blank" rel="noopener noreferrer">${resetLink}</a></p>
+            <p><a href="${resetLink}">Reset password</a></p>
             <p>If you did not request this, ignore this email.</p>
-            </body>
-            </html>
         `;
-
+        
         await sendEmail(user.email, subject, `Reset your password: ${resetLink}`, html);
 
         return res.status(200).json({ message: "Password reset link sent." });
