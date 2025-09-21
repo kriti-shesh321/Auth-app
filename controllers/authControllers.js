@@ -110,7 +110,7 @@ export const forgotPassword = async (req, res) => {
         const html = `
             <p>Hi ${user.username || ''},</p>
             <p>Click the link below to reset your password. This link expires in 1 hour.</p>
-            <p><a href="${resetLink}">Reset password</a></p>
+            <p><a href="${resetLink}" target="_blank" rel="noopener noreferrer">${resetLink}</a></p>
             <p>If you did not request this, ignore this email.</p>
         `;
         
