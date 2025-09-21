@@ -104,7 +104,7 @@ export const forgotPassword = async (req, res) => {
             await pool.query(insertQ, [user.id, hashedToken, expiresAt]);
         }
 
-        const resetLink = `${process.env.APP_BASE_URL.replace(/\/$/, '')}/reset-password?token=${encodeURIComponent(token)}`;
+        const resetLink = `${APP_BASE_URL.replace(/\/$/, '')}/reset-password?token=${encodeURIComponent(token)}`;
         
         const subject = 'Reset your password';
         const html = `
