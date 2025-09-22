@@ -1,0 +1,446 @@
+{
+  "info": {
+    "_postman_id": "a8d23206-d539-4902-b3a6-7b917ada84e4",
+    "name": "Banao Internship app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17086606",
+    "_collection_link": "https://test44-4738.postman.co/workspace/test-Workspace~1e424714-dd83-4b78-8fb9-926335bd3fbf/collection/17086606-a8d23206-d539-4902-b3a6-7b917ada84e4?action=share&source=collection_link&creator=17086606"
+  },
+  "item": [
+    {
+      "name": "hosted backend",
+      "item": [
+        {
+          "name": "forgot password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"{{testEmail}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://auth-app-production-2c17.up.railway.app/api/v1/auth/forgot-password",
+              "protocol": "https",
+              "host": [
+                "auth-app-production-2c17",
+                "up",
+                "railway",
+                "app"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "forgot-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "user login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\": \"Kei Izumi\",\n    \"password\": \"qwertyuiop\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://auth-app-production-2c17.up.railway.app/api/v1/auth/login",
+              "protocol": "https",
+              "host": [
+                "auth-app-production-2c17",
+                "up",
+                "railway",
+                "app"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "register new user",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"{{testEmail}}\",\n    \"username\": \"Kei Izumi\",\n    \"password\": \"123456789\"\n}"
+            },
+            "url": {
+              "raw": "https://auth-app-production-2c17.up.railway.app/api/v1/auth/signup",
+              "protocol": "https",
+              "host": [
+                "auth-app-production-2c17",
+                "up",
+                "railway",
+                "app"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "reset password from email link",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"newPassword\": \"qwertyuiop\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"{{testEmail}}\",\n    \"username\": \"rei\",\n    \"password\": \"123456789\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{localURL8000}}/api/v1/auth/signup",
+          "host": [
+            "{{localURL8000}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"Kei Izumi\",\n    \"password\": \"qwertyuiop\"\n}"
+        },
+        "url": {
+          "raw": "{{localURL8000}}/api/v1/auth/login",
+          "host": [
+            "{{localURL8000}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "forgot-password",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"{{testEmail}}\"\n}"
+        },
+        "url": {
+          "raw": "{{localURL8000}}/api/v1/auth/forgot-password",
+          "host": [
+            "{{localURL8000}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "forgot-password"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"token\": \"12257cd85965588c4d89b7f67ed3f08f7cbcc656ed3e6c406693e94c6aa8e6e9\",\n    \"newPassword\": \"qwertyuiop\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{localURL8000}}/api/v1/auth/reset-password?token=12257cd85965588c4d89b7f67ed3f08f7cbcc656ed3e6c406693e94c6aa8e6e9",
+          "host": [
+            "{{localURL8000}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "reset-password"
+          ],
+          "query": [
+            {
+              "key": "token",
+              "value": "12257cd85965588c4d89b7f67ed3f08f7cbcc656ed3e6c406693e94c6aa8e6e9"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "register new user",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"{{testEmail}}\",\n    \"username\": \"Kei Izumi\",\n    \"password\": \"123456789\"\n}"
+        },
+        "url": {
+          "raw": "{{railwayURL}}/api/v1/auth/signup",
+          "host": [
+            "{{railwayURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"Kei Izumi\",\n    \"password\": \"qwertyuiop\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{railwayURL}}/api/v1/auth/login",
+          "host": [
+            "{{railwayURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "forgot password",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"{{testEmail}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{railwayURL}}/api/v1/auth/forgot-password",
+          "host": [
+            "{{railwayURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "forgot-password"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "reset password from email link",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"newPassword\": \"qwertyuiop\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{railwayURL}}/api/v1/auth/reset-password?token=07e9c92f4849ed44682453444b5d25560d764e2d019ef3d0e18108575f3d8044",
+          "host": [
+            "{{railwayURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "reset-password"
+          ],
+          "query": [
+            {
+              "key": "token",
+              "value": "07e9c92f4849ed44682453444b5d25560d764e2d019ef3d0e18108575f3d8044"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "localURL8000",
+      "value": ""
+    },
+    {
+      "key": "railwayURL",
+      "value": ""
+    },
+    {
+      "key": "testEmail",
+      "value": ""
+    }
+  ]
+}
